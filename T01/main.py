@@ -112,7 +112,7 @@ def RSE(image: np.ndarray, reference: np.ndarray) -> float:
   error: float = 0.0
   size: int = len(image)
 
-  for i in range(size):
+  for i in range(0, size, 2):
     for j in range(size):
       error += pow(float(image[i][j]) - float(reference[i][j]), 2)
 
